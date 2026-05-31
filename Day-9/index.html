@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js o'rganish | Day-9 | 22.05.2026y 15:00-16:30</title>
+    <!-- Bu kodlar azizbek tomonidan 22.05.2026y 15:00-16:30 da yozildi. -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        p {
+            padding: 50px;
+            background: blue;
+            font-size: 50px;
+            color: white;
+        }
+        p:hover {
+            cursor: pointer;
+        }
+        .inp1 {
+            padding: 10px 5px;
+            margin: 15px;
+            margin-left: 15px;
+            
+        }
+        .inp2 {
+            padding: 10px 5px;
+            margin: 15px;
+            margin-left: 15px;
+        }
+        .sendBtn {
+            width: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border: none;
+            background: rgb(44, 94, 12);
+            color: white;
+            border-radius: 10px;
+            margin-left: 80px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .sendBtn:hover {
+            cursor: pointer;
+            background: rgb(31, 123, 15);
+        }
+        .form-div {
+            width: 280px;
+            height: 300px;
+            background: white;
+            margin: 30px;
+            background: blue;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Chetdagi text</p>
+    </div>
+    <div class="form-div">
+        <input type="text" class="inp1" placeholder="Ismingizni yozing...">
+        <input type="text" class="inp2" placeholder="Xabaringizni yozing..">
+        <button class="sendBtn" id="sendBtn">Send</button>
+    </div>
+
+    <script>
+        const p = document.querySelector("p")
+        const inp1 = document.querySelector("inp1")
+        const inp2 = document.querySelector("inp2")
+
+        p.addEventListener("mouseenter", () => {
+            p.style.fontSize = "50px"
+            p.style.background = "blue"
+            p.style.textAlign = "center"
+            p.textContent = "O'rtadagi text!"
+        })
+
+        p.addEventListener("dblclick", () => {
+            p.style.fontSize = "50px"
+            p.style.background = "blue"
+            p.style.textAlign = "left"
+            p.textContent = "Chetga tushdi!"
+        })
+
+        function clearInput() {
+            inp1.value.textContent = ""
+            inp2.value.textContent = ""
+        }
+
+        window.addEventListener("keydown", e => {
+            if (e.key === "Enter") {
+                alert("Sizning xabaringiz yuborildi!")
+                clearInput()
+            }
+        })
+
+        sendBtn.addEventListener("click", () => {
+            alert("Xabaringiz yuborildi!")
+            clearInput()
+        })
+    </script>
+</body>
+</html>

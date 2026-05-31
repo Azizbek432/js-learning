@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js learning | Day-8 | Azizbek Abdullayev</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .btn {
+            background: #affffa;
+            border: none;
+            border-radius: 10px;
+            padding: 20px 15px;
+            position: relative;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Salom!..Bugun biz array va massivni tushunish maqsadida bir kichkina amaliy ishga qo'l urmoqdamiz..(Ya'ni rasm yig'ish dasturi desak ham bo'ladi.) -->
+    <!-- Dars vaqti: 20.05.2026y 15:00 - 16:30... -->
+
+
+    <!-- <img src="falcon.jpg" alt="falcon"> -->
+
+    <div>
+        <button class="btn">Meni bos</button>
+    </div>
+
+
+    <script>
+        // const img = document.querySelector("img");
+
+        // window.addEventListener("mousemove", e => {
+        //     img.style.position = "absolute";
+        //     img.style.top = `${e.clientY - (img.offsetHeight / 2)}px`
+        //     img.style.left = `${e.clientX - (img.offsetWidth / 2)}px`
+        // })
+
+        const btn = document.querySelector(".btn")
+        meter = 0
+
+        btn.addEventListener("click", () => {
+
+            setInterval(() => {
+                meter += 1
+                btn.style.left = `${meter}px`
+            }, 10)
+        })
+    </script>
+</body>
+</html>

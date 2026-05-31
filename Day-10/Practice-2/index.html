@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js learning | Practice 2 | Day 10 | Azizbek</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #175458;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .box {
+            width: 350px;
+            padding: 20px;
+            display: flex;
+            background: #ffffff;
+            flex-direction: column;
+            border-radius: 10px;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .box p {
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input {
+            margin: 10px;
+            padding: 12px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #175458;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #175458;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #0e3639;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p>Iltimos, ism va familiyangizni kiriting!</p>
+        <input type="text" id="inp1" placeholder="Ismingiz...">
+        <input type="text" id="inp2" placeholder="Familiyangiz...">
+        <button id="add">+ ADD</button>
+    </div>
+
+    <script>
+        const add = document.querySelector("#add");
+        const inp1 = document.querySelector("#inp1");
+        const inp2 = document.querySelector("#inp2");
+        
+        const allData = [];
+
+        add.addEventListener("click ", () => {
+            let name = inp1.value.trim();
+            let surname = inp2.value.trim();
+
+            if (name === "" || surname === "") {
+                alert("Xatolik: Ism va familiyani to'liq kiriting!");
+                return;
+            } 
+
+            if (!isNaN(name) || !isNaN(surname)) {
+                alert("Xatolik: Ism yoki familiyada faqat harflar bo'lishi kerak!");
+                return;
+            }
+
+            let fullName = `${name} ${surname}`;
+            
+            allData.push({
+                firstName: name,
+                lastName: surname
+            });
+
+            console.log("Hozirgi ro'yxat:", allData);
+            alert(`Muvaffaqiyatli qo'shildi: ${fullName}`);
+
+            inp1.value = "";
+            inp2.value = "";
+            inp1.focus(); 
+        });
+    </script>
+</body>
+</html>
