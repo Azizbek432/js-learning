@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}   
+
+.submit {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    background: #1b82c4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #1d6997;
+}
+
+.allSalary {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #1b82c4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.allSalary:hover {
+    background: #1d6997;
+}   
+
+.allSalaryContainer {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #5f8ca8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.allSalaryResult{
+    margin: 0 auto;
+    color: black;
+    font-weight: bold;  
+}
