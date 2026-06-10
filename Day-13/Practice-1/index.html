@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js learning | Day-13 | Azizbek Abdullayev</title>
+</head>
+<body>
+    <!-- API bilan ishlash!..Js learning Day-13... -->
+    <!-- Dars vaqti : 10.06.2026y 15:00 - 16:30 gacha.. -->
+    <div>
+        <code id="code">
+            <pre id="format" style="color: black;   "></pre>
+        </code>
+    </div>
+
+    <script>
+        (async function(place){
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${place}&appid=81a5d39de1b847d6a3b7fbc04912b1f4`;
+            let weatherData = await fetch(url);
+
+            let d = await weatherData.json();
+
+            let code = document.getElementById("#code");
+            let format = document.querySelector("#format");
+
+            format.textContent = JSON.stringify(d, null, 4);
+
+            let gradus = d.main.temp - 273.15;
+            
+            console.log(Math.floor(gradus));
+
+        })("yakutsk");
+    </script>
+</body>
+</html>
